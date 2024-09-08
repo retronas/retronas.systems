@@ -1,3 +1,5 @@
+systems: /opt/retronas/data/systems.yml
+
 system_map: "{{ 
   []
   |union(system_acorn)

@@ -1,6 +1,6 @@
-- name: create temp dir
+- name: create data dir
   ansible.builtin.file:
-    path: "/opt/retronas-test/data"
+    path: "/opt/retronas/data"
     mode: 0755
     owner: root
     group: root
@@ -10,8 +10,8 @@
 - name: grab retronas systems
   ansible.builtin.uri:
     url: https://raw.githubusercontent.com/retronas/systems/main/systems.yml
-    dest: /opt/retronas-test/data/systems.yml
+    dest: "{{ systems }}"
   delegate_to: localhost
 
 - name: include systems vars
-  include_vars: /opt/retronas-test/data/systems.yml
+  include_vars: "{{ systems }}"
