@@ -41,6 +41,7 @@ system_map: "{{
   |union(system_homelab)
   |union(system_ibm)
   |union(system_infocom)
+  |union(system_intelligentsoftware)
   |union(system_interact)
   |union(system_interton)
   |union(system_jupiter)
